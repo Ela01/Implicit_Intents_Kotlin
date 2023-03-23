@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Implicit Intents Kotlin</string>
+    <string name="edit_text_example_name">Example Name</string>
+    <string name="hint_username">Username</string>
+    <string name="text_view_already_registered_login_here">Already Registered? Login here</string>
+    <string name="text_view_create_account">Create Account</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="filled_button_sign_up">Sign Up</string>
+    <string name="text_button_forgot_password_reset_here">Forgot Password? Reset here</string>
+    <string name="image_view_logo">Logo</string>
+    <string name="edit_text_phone_number_example">212 265 4631</string>
+    <string name="filled_drop_down_menu_gender">Gender</string>
+    <string name="text_input_layout_phone_number">Phone Number</string>
+</resources>
