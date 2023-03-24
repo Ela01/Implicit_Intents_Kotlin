@@ -162,12 +162,17 @@
             app:boxCornerRadiusBottomEnd="16dp"
             app:boxCornerRadiusBottomStart="16dp"
             app:boxCornerRadiusTopEnd="16dp"
-            app:boxCornerRadiusTopStart="16dp">
+            app:boxCornerRadiusTopStart="16dp"
+            app:endIconTint="@color/text_field_hint_light_yellow"
+            app:boxStrokeColor="@color/text_field_hint_light_yellow"
+            >
 
             <AutoCompleteTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif"
+                android:textColor="@color/text_field_hint_light_yellow"
+                android:textColorHint="@color/text_field_hint_light_yellow"
                 android:inputType="none"
                 />
 

@@ -1,10 +1,11 @@
 package com.ewbugs.implicitintentskotlin
 
-//import android.R.layout.activity_list_item
-import androidx.appcompat.app.AppCompatActivity
+
+import android.content.Intent
 import android.os.Bundle
-//import android.widget.ArrayAdapter
-//import android.widget.AutoCompleteTextView
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
+import androidx.appcompat.app.AppCompatActivity
 import com.ewbugs.implicitintentskotlin.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -18,21 +19,26 @@ class MainActivity : AppCompatActivity() {
         binding.filledButtonSignUp.setOnClickListener {
             onPreviewClicked()
         }
-        //val menuItems = listOf("Female", "Male", "Transgender", "Gender-Neutral", "Non-Binary", "Agender", "Pan-gender", "Gender-queer", "Two-Spirit", "Third-Gender", "combination of the above", "all of the above", "none of the above")
-        //val menuAdapter = ArrayAdapter(this, activity_list_item, menuItems)
-        //binding.exposedDropDownMenu.editText
-        //(viewText.editText as? AutoCompleteTextView)?.setAdapter(adapter)
+
+        val menuItems = listOf("Female", "Male", "Transgender", "Gender-Neutral", "Non-Binary", "Agender", "Pan-gender", "Gender-queer", "Two-Spirit", "Third-Gender", "combination of the above", "all of the above", "none of the above")
+        val menuAdapter = ArrayAdapter(this, R.layout.list_item, menuItems)
+        (binding.exposedDropDownMenu.editText as? AutoCompleteTextView)?.setAdapter(menuAdapter)
     }
 
     private fun onPreviewClicked(){
 
-        //val message = Message{ * add commas between elements *
-        binding.editTextUserName.text.toString()
-        binding.editTextEmail.text.toString()
-        binding.editTextPhoneNumber.text.toString()
-        binding.editTextPassword.text.toString()
-        binding.exposedDropDownMenu.isSelected.toString()
+        //val selectedValue: Editable? = (binding.exposedDropDownMenu.editText as AutoCompleteTextView).text
 
-        //}
+        val profile = AccountInformation(
+        binding.editTextUserName.text.toString(),
+        binding.editTextEmail.text.toString(),
+        binding.editTextPhoneNumber.text.toString(),
+        binding.editTextPassword.text.toString(),
+        binding.exposedDropDownMenu.editText.toString())
+
+        val accountPreviewActivityIntent = Intent(this, AccountPreviewActivity::class.java)
+        accountPreviewActivityIntent.putExtra("Account Information Profile", profile)
+
+        startActivity(accountPreviewActivityIntent)
     }
 }
