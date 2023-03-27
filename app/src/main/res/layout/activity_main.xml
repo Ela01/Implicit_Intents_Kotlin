@@ -148,36 +148,30 @@
                 tools:text="************" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/exposed_drop_down_menu"
-            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
-            android:layout_width="320dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="8dp"
-            android:hint="@string/filled_drop_down_menu_gender"
-            android:textColorHint="@color/text_field_hint_light_yellow"
-            app:boxBackgroundColor="@color/text_field_background_color_green"
-            app:boxCornerRadiusBottomEnd="16dp"
-            app:boxCornerRadiusBottomStart="16dp"
-            app:boxCornerRadiusTopEnd="16dp"
-            app:boxCornerRadiusTopStart="16dp"
-            app:endIconTint="@color/text_field_hint_light_yellow"
-            app:boxStrokeColor="@color/text_field_hint_light_yellow"
-            >
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:gravity="center_horizontal">
 
-            <AutoCompleteTextView
-                android:layout_width="match_parent"
+            <RadioButton
+                android:id="@+id/check_box_n_a"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif"
-                android:textColor="@color/text_field_hint_light_yellow"
-                android:textColorHint="@color/text_field_hint_light_yellow"
-                android:inputType="none"
-                />
+                android:layout_marginEnd="16dp"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/check_box_n_a" />
 
-        </com.google.android.material.textfield.TextInputLayout>
+            <Spinner
+                android:id="@+id/spinner_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                android:layout_gravity="center_horizontal"
+                tools:listitem="@android:layout/simple_list_item_1" />
 
+        </LinearLayout>
 
         <Button
             android:id="@+id/filled_button_sign_up"

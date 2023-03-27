@@ -22,9 +22,9 @@ class AccountPreviewActivity : AppCompatActivity() {
 
     private fun displayProfile() {
 
-        profile = intent.getSerializableExtra("Profile") as AccountInformation
+        profile = intent.getSerializableExtra("Account Information Profile") as AccountInformation
 
-        """
+        profilePreviewText = """
                 
                Username: ${profile.userName}
                
@@ -34,9 +34,10 @@ class AccountPreviewActivity : AppCompatActivity() {
                
                Password: ${profile.password}
                
-               Gender: ${profile.getGender()}
+               Gender: ${profile.ifEmpty()}
+               
                           
-            """.trimIndent().also { profilePreviewText = it }
+            """.trimIndent()
 
         binding.textViewProfile.text = profilePreviewText
     }
@@ -45,7 +46,7 @@ class AccountPreviewActivity : AppCompatActivity() {
 
         binding.buttonSaveAndSend.setOnClickListener {
 
-            val intent = Intent(Intent.ACTION_SENDTO).apply {
+            intent = Intent(Intent.ACTION_SENDTO).apply {
                 data = Uri.parse("smsto: ${profile.phoneNumber}")
                 putExtra("sms_body", profilePreviewText)
             }

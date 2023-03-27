@@ -12,4 +12,7 @@
     <string name="edit_text_phone_number_example">212 265 4631</string>
     <string name="filled_drop_down_menu_gender">Gender</string>
     <string name="text_input_layout_phone_number">Phone Number</string>
+    <string name="gender">Gender</string>
+    <string name="button_save_and_send">Save and Send</string>
+    <string name="check_box_n_a">N/A</string>
 </resources>

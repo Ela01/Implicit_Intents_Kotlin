@@ -31,6 +31,6 @@
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Save and Send" />
+        android:text="@string/button_save_and_send" />
 
 </LinearLayout>
