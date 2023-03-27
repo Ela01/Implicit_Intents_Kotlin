@@ -1,33 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
     android:orientation="vertical"
-    android:padding="48dp">
+    android:padding="32dp">
 
-    <androidx.cardview.widget.CardView
+    <TextView
         android:layout_width="match_parent"
+        android:layout_marginBottom="32dp"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="#FFF8CB"
-        app:cardCornerRadius="6dp"
-        app:cardUseCompatPadding="true">
+        android:fontFamily="sans-serif"
+        android:text="@string/text_view_header_account_information"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/text_view_profile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="12dp"
-            android:fontFamily="sans-serif-light"
-            android:textColor="#212121"
-            android:textSize="18sp"
-            tools:text="This will be our preview message, I will make a long message to make sure it will go on to multiple lines" />
-    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/text_view_profile"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:lineSpacingExtra="16sp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        tools:text="This will be our preview message, I will make a long message to make sure it will go on to multiple lines" />
+
 
     <Button
         android:id="@+id/button_save_and_send"
         style="@style/Widget.AppCompat.Button.Colored"
+
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
