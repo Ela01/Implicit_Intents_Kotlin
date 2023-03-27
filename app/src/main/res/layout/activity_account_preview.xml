@@ -25,7 +25,7 @@
         android:fontFamily="sans-serif-light"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
-        tools:text="This will be our preview message, I will make a long message to make sure it will go on to multiple lines" />
+        tools:text="The preview message. One long message to make sure it will go on to multiple lines" />
 
 
     <Button
